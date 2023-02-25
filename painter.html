@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creative painter</title>
+    </head>
+<body>
+<h1>Painter Entry Sanku Bhavya Reddy</h1>
+<form>
+    <label for="input1">The hidden painter name</label><br>
+    <input type="password" id="input1" name="input1" value="Monet"><br>
+    <label for="input2">Guess the painter</label><br>
+    <input type="text" id="input2" name="input2"><br>
+    <input type="button" value="Guess the painter" onclick="checkPainter()">
+
+    <p id="result"></p>
+</form>
+
+    <script>
+        var good = 0;
+        var oops = 0;
+        function checkPainter(){
+            name = document.getElementById("input1").value;
+            guess = document.getElementById("input2").value;
+            if(name==guess){
+                good=good+1;
+                alert("You got it right\ngood"+good);
+            }
+            else{
+                oops=oops+1;
+                alert("Sorry\noops"+oops);
+            }
+            document.getElementById("result").innerHTML= "good is "+good+" oops is "+oops;
+        }
+    </script>
+
+</body>
+</html> 
