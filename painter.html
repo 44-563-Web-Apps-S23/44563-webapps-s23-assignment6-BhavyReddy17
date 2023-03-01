@@ -14,7 +14,31 @@
 
     <p id="result"></p>
 </form>
+<div onclick="selectImage()">
+    <img src="kalmia.jpg" id="imageId" alt="kalmia flower" width="100" height="100" ">
+</div>
+<script>
+    var useimage = 1;
+    function selectImage(){
+        
+        switch(useimage){
+            
+            case 1:
+                document.getElementById("imageId").src="neillia.jpg";
+                useimage =2;
+                break;
+            case 2:
+                 document.getElementById("imageId").src="SL-Kaleidoscope-Abelia-Landscape-500.jpg";
+                 useimage =3;
+                break;
+            case 3:
+            document.getElementById("imageId").src="kalmia.jpg";
+                useimage=1;
+                break;
 
+        }
+    }
+</script>
     <script>
         var good = 0;
         var oops = 0;
