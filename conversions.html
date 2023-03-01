@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Currency Conversions</title>
+    </head>
+    <body>
+           <h1> shows currency conversions by Bhavya Reddy Sanku</h1>
+        <form>
+            <label for="num01">Enter base amount</label><br>
+           <input type="number" id="num01" min="50" value="10"><br>
+           <label for="num02">Enter the conversion rate</label><br>
+           <input type="number" id="num02" value="35"><br>
+           <input type="button" value="Show conversions" onclick="convert()">
+        </form>
+        <p id="Result"> </p>
+        <script>
+            function convert(){
+                // alert("hi!");
+                no1 = document.getElementById("num01").value;
+                no2 = document.getElementById("num02").value;
+                mulnum=2;
+                var toShow = " ";
+                for(var i=1;i<16;i=i*2){
+                    console.log(no1*no2*i);
+                    var val = no1*no2*i;
+                    // toshow.concat(no1," is ",no2);
+                    toShow+=no1*i+" is "+val.toFixed(1)+" ;";
+
+                }
+                console.log(toShow);
+                    out=document.getElementById("Result");
+                    out.innerHTML="Conversions are: "+toShow;
+            }
+        </script>
+    </body>
+</html>
