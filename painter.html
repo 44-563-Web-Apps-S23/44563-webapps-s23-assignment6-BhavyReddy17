@@ -10,7 +10,7 @@
     <input type="password" id="input1" name="input1" value="Monet"><br>
     <label for="input2">Guess the painter</label><br>
     <input type="text" id="input2" name="input2"><br>
-    <input type="button" value="Guess the painter" onclick="checkPainter()">
+    <input type="button" id="btn" value="Guess the painter" onclick="checkPainter()">
 
     <p id="result"></p>
 </form>
@@ -54,6 +54,10 @@
                 alert("Sorry\noops"+oops);
             }
             document.getElementById("result").innerHTML= "good is "+good+" oops is "+oops;
+            if(oops>=10){
+                alert("Sorry, ran out of guess");
+                document.getElementById("btn").style.visibility="hidden";
+            }
         }
     </script>
 
